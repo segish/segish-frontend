@@ -56,7 +56,7 @@ const NavBar = () => {
       
       const fetchData = async () =>{
         try {
-          const {data: response} = await axios.get("https://tsegish.onrender.com/api/search?texts="+texts,{ withCredentials: true});
+          const {data: response} = await axios.get("https://segish-social.onrender.com/api/search?texts="+texts,{ withCredentials: true});
           setDatas(response);
         } catch (error) {
           console.error(error.message);
