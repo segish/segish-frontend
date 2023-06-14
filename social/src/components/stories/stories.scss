@@ -1,0 +1,75 @@
+@import "../../style.scss";
+.stories::-webkit-scrollbar{
+    display: none;
+}
+.stories{
+    height: 250px;
+    margin-bottom: 30px;
+    width: 680px;
+    overflow-x: scroll;
+    @include tablet{
+        height: 150px;
+        gap: 10px;
+        width: 547px;
+    }
+    @include mobile{
+        height: 50px;
+        justify-content: space-between;
+        width: inherit;
+    }
+    .ssdd{  
+        display: flex;
+        height: 100%;  
+        gap: 10px;
+        width: 1613px;
+        overflow-x: auto;
+        white-space: nowrap;    
+        width: fit-content;
+        @include mobile{
+            width: 360px;
+        }
+        .story{
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            
+            @include mobile{
+                flex: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            } 
+            img{
+                width: 100px;
+                height: 100%;
+                object-fit: cover;
+            }
+            span{
+                position: absolute;
+                left: 10px;
+                color: white;
+                bottom: 10px;
+                @include mobile{
+                    display: none;
+                }
+            }
+            button{
+                color: white;
+                position: absolute;
+                left: 16px;
+                bottom: 36px;
+                background-color: blue;
+                border: none;
+                border-radius: 50%;
+                font-size: large;
+                font-weight: bolder;
+                cursor: pointer;
+                @include mobile{
+                    left: 12px;
+                    bottom: 7px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+ @import "../../style.scss";
+.NavBar{
+    @include themify($themes) {
+        z-index: 1;
+        position: sticky;
+        top: 0;
+        background-color: themed("bg");
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 50px;
+        border-bottom: solid themed("border");
+        color: themed("textColor");
+        
+        
+        @include tablet{
+            margin-right: 1px;
+        }
+        @include mobile{
+            width: 343px;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex: 30;
+            span{
+                font-weight: bold;
+                font-size: 20px;
+                color: themed("logo");
+            }
+            .search{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                border: 1px solid themed("border");
+                border-radius:10px;
+                padding: 0;
+                width: 50%;
+                .icon{
+                    margin: 0px 10px;
+                }
+                input{
+                    border: none;
+                    width: 100%;
+                    background-color: transparent;
+                    color: themed("textColor");
+                    height: 40px;
+                    border-radius: 10px 10px 0px 0px;
+                    @include mobile{
+                        display: none;
+                    }
+                    @include tablet{
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        .right{
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            flex: 4;
+            @include mobile{
+                display: none;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 500;
+                @include tablet{
+                    display: none;
+                }
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                button{
+                    height: 40px;
+                    width: 70px;
+                    border-radius: 10px;
+                    background-color: inherit;
+                    font-weight: bold;
+                    color: rgb(184, 23, 23);
+                    font-size: large;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

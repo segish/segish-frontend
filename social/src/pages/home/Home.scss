@@ -1,0 +1,20 @@
+@import "../../style.scss";
+.Home::-webkit-scrollbar{
+    display: none;
+}
+.Home{
+    @include themify($themes) {
+        background-color: themed("bgSoft");
+        padding: 20px 70px;
+        overflow: scroll;
+        height: calc(100vh - 70px);
+        
+        @include mobile{
+            padding: 10px;
+        }
+        @include tablet{
+            padding: 10px;
+            height: calc(100vh - 45px);
+        }
+    }
+}

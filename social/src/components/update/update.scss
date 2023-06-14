@@ -1,0 +1,45 @@
+.update{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 50%;
+    height: 50%;
+    padding: 50px;
+    margin: auto;
+    background-color: rgb(156, 139, 187);
+    z-index: 99999;
+    border-radius: 50px;
+    form{
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        button{
+            align-self: center;
+            height: 40px;
+            width: 70px;
+            border-radius: 10px;
+            background-color: rgb(61, 41, 177);
+            color: white;
+            margin-left: 0;
+            margin-top: 0;
+            border: none;
+            cursor: pointer;
+        }
+    }
+    button{
+        align-self: flex-end;
+        height: 40px;
+        width: 70px;
+        border-radius: 10px;
+        background-color: rgb(184, 23, 23);
+        color: white;
+        font-size: large;
+        margin-left: 700px;
+        margin-top: -100px;
+        border: none;
+        cursor: pointer;
+    }
+}
