@@ -24,7 +24,7 @@ const Register = () => {
       setErr("All fields must be field")
     }else{
       try{
-        await axios.post("https://tsegish.onrender.com/api/auth/register",inputs)
+        await axios.post("https://segish-social.onrender.com/api/auth/register",inputs)
         navigate("/login")
       }catch(err){
         setErr(err)
